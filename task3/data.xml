@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<fullname>George</fullname>
+	<characteristics>
+		<sex>male</sex>
+		<age>27</age>
+	</characteristics>
+	<skills>smart</skills>
+	<skills>strong</skills>
+	<experience>
+		<position>developer</position>
+		<workplace>netflix</workplace>
+		<salary>7000</salary>
+	</experience>
+	<experience>
+		<position>engineer</position>
+		<workplace>facebook</workplace>
+		<id_card>56117</id_card>
+		<Country>Scotland</Country>
+	</experience>
+</root>
