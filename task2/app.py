@@ -61,7 +61,7 @@ def extract_supplier_details(supplier_url):
         return None, None, None
 
 print(f"Fetching suppliers page: {main_url + 'registry/rqc?count_record=50&page=2'}")
-suppliers_page = get_soup(main_url + 'registry/rqc?count_record=50&page=2')
+suppliers_page = get_soup(main_url + 'registry/rqc?count_record=2000&page=1')
 if suppliers_page:
     suppliers = suppliers_page.find_all('tr')[1:]  
     for supplier in suppliers:
