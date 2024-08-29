@@ -9,7 +9,6 @@ data = [['Наименование организации', 'БИН органи
 seen_entries = set()  
 
 def get_soup(url, retries=3, delay=5):
-    """Fetch the content of the URL and return a BeautifulSoup object, retrying if necessary."""
     attempt = 0
     while attempt < retries:
         try:
@@ -26,13 +25,11 @@ def get_soup(url, retries=3, delay=5):
     return None
 
 def extract_supplier_details(supplier_url):
-    """Extract additional details from the supplier's detail page."""
     print(f"Extracting details from: {supplier_url}")
     soup = get_soup(supplier_url)
     if not soup:
         print("No soup object returned. Skipping details extraction.")
         return None, None, None
-    
     try:
         manager_tables = soup.find_all('table', class_='table-striped')
         fio, iin = None, None
